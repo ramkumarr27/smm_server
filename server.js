@@ -1,6 +1,10 @@
 require('dotenv').config();
 const express  = require('express');
 const  app = express();
+const cors = require("cors");
+const cookieParser =  require("cookie-parser");
+
+
 // const path = require("path");
 
 const {dbConnect} = require('./config/dbConnect');
@@ -13,6 +17,9 @@ const emailAPI = require('./apis/emailAPI')
 //Connecting to  DB
 dbConnect();
 app.use(express.json());
+app.use(cors());
+app.use(cookieParser());
+
 
 // app.use(express.static(path.join(__dirname,"/build")));
 

@@ -2,15 +2,15 @@ const nodemailer = require("nodemailer"); // for fake ethereal
 const User = require("../models/User");
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.ethereal.email",
+  host: 'smtp.ethereal.email',
   port: 587,
   auth: {
-    user: "rita.willms@ethereal.email",
-    pass: "ujZ54a6m3McZRy9zen",
+      user: 'nelson.hansen@ethereal.email',
+      pass: 'ZzjhS5BcSR2bKy8emz'
   },
-  tls: {
-    rejectUnauthorized: false,
-  },
+  tls :{
+       rejectUnauthorized : false
+     }
 });
 
 // tls :{
